@@ -114,6 +114,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 BuildRequires: jpackage-utils
+BuildRequires: java-rpmbuild >= 1.7.5
 BuildRequires: java-devel >= 1.6.0
 BuildRequires: ant >= 0:1.7.0
 BuildRequires: ant-junit >= 0:1.7.0
