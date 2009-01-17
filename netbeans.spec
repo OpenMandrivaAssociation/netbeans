@@ -73,8 +73,7 @@
 
 # Used xml resolver
 %define xml_resolver netbeans-resolver
-# %define xml_resolver_ver %{nb_ver}
-%define xml_resolver_ver 6.5
+%define xml_resolver_ver %{nb_ver}
 %define xml_resolver_jar %{_javadir}/%{xml_resolver}-%{xml_resolver_ver}.jar
 
 # Used svn client adapter
@@ -152,7 +151,7 @@ Requires: %{nb_platform_pkg}   >= %{version}
 Requires: lucene >= 2.3.1
 Requires: junit >= 3.8.2
 Requires: junit4 >= 4.4
-Obsoletes: netbeans-ide
+Obsoletes: netbeans-ide < 6.5
 
 %description
 NetBeans IDE is an Integrated Development Environment (IDE) for Java/JavaFX, 
