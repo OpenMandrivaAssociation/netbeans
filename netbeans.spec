@@ -86,9 +86,8 @@ Name:           %{nb_}
 Version:        %{nb_ver}
 Release:        %mkrel 1
 Summary:        Integrated Development Environment (IDE)
-Group:          Development/Tools
+Group:          Development/Java
 License:        GPLv2 with exceptions or CDDL
-Vendor:         netbeans.org
 URL:            http://www.netbeans.org
 
 # TODO change URL
