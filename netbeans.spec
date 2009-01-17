@@ -153,6 +153,7 @@ Requires: %{nb_platform_pkg}   >= %{version}
 Requires: lucene >= 2.3.1
 Requires: junit >= 3.8.2
 Requires: junit4 >= 4.4
+Obsoletes: netbeans-ide
 
 %description
 NetBeans IDE is an Integrated Development Environment (IDE) for Java/JavaFX, 
