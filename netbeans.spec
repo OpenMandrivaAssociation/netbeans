@@ -166,7 +166,7 @@ this open-source project.
 %package %{nb_apisupport}
 
 Summary: Common NetBeans Platform Development Related Libraries for NetBeans
-Group: Development/Tools
+Group: Development/Java
 Requires: jpackage-utils
 Requires: java >= 1.6.0
 Requires: %{nb_ide_pkg}      = %{version}-%{release}
@@ -183,7 +183,7 @@ Common libraries for development of NetBeans Platform modular extensions.
 %package %{nb_ide}
 
 Summary: Integrated Development Environment (IDE) Libraries for NetBeans
-Group: Development/Tools
+Group: Development/Java
 Requires: jpackage-utils
 Requires: java >= 1.6.0
 Requires: %{nb_platform_pkg} >= %{version}
@@ -205,7 +205,7 @@ Common languages independent libraries for use in the IDE.
 %package %{nb_java}
 
 Summary: Common Java Related Libraries for NetBeans
-Group: Development/Tools
+Group: Development/Java
 Requires: jpackage-utils
 Requires: java >= 1.6.0
 Requires: %{name}-%{nb_ide} >= %{version}
