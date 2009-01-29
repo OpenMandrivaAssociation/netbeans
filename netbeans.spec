@@ -83,7 +83,7 @@
 
 Name:           %{nb_}
 Version:        %{nb_ver}
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Integrated Development Environment (IDE)
 Group:          Development/Java
 License:        GPLv2 with exceptions or CDDL
