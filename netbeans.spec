@@ -109,6 +109,8 @@ Patch6: %{name}-%{version}-60-small-ide-config.patch
 Patch7: %{name}-%{version}-70-updatecenters.patch
 # avoiding use svnkit
 Patch8: %{name}-%{version}-80-nosvnkit.patch
+# #157028: fixes to work with lucene 2.4
+Patch9: %{name}-%{version}-90-lucene24.patch
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -257,6 +259,7 @@ jar cf swingapp/external/swing-worker-1.1.jar swingapp/src/javax/swing/SwingWork
 %patch6 -p1 -b .sav
 %patch7 -p1 -b .sav
 %patch8 -p1 -b .sav
+%patch9 -p1 -b .sav
 
 %build
 
