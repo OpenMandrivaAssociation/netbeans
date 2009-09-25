@@ -159,7 +159,7 @@ BuildRequires: lucene >= 2.3.1
 BuildRequires: unzip
 BuildRequires: desktop-file-utils
 BuildRequires: netbeans-javaparser >= %{javaparser_ver}
-#BuildRequires: xerces-j2 >= 2.8.0
+BuildRequires: xerces-j2 >= 2.8.0
 BuildRequires: appframework >= 1.0.3
 BuildRequires: beansbinding >= 1.2.1
 BuildRequires: freemarker >= 2.3.8
@@ -221,7 +221,7 @@ Requires: jsch >= 0.1.39
 Requires: %{xml_resolver} >= %{xml_resolver_ver}
 Requires: ini4j >= 0.4.1
 Requires: freemarker >= 2.3.8
-#Requires: xerces-j2 >= 2.8.0
+Requires: xerces-j2 >= 2.8.0
 Requires: netbeans-svnclientadapter >= %{version}
 Requires: svn-javahl >= 1.5.0
 Requires: jakarta-commons-logging >= 1.0.4
