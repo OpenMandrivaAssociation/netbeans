@@ -346,8 +346,8 @@ IDE_EXT_DIR=%{build_nb_dir}/%{nb_ide}/modules/ext
 
 JAVA_EXT_DIR=%{build_nb_dir}/%{nb_java}/modules/ext
 %{__mkdir_p} ${JAVA_EXT_DIR}
-%lnSysJAR netbeans-javaparser-api-%{version}.jar ${JAVA_EXT_DIR}/javac-api-nb-7.0-b07.jar
-%lnSysJAR netbeans-javaparser-impl-%{version}.jar ${JAVA_EXT_DIR}/javac-impl-nb-7.0-b07.jar
+%lnSysJAR libnb-javaparser-api-%{version}.jar ${JAVA_EXT_DIR}/javac-api-nb-7.0-b07.jar
+%lnSysJAR libnb-javaparser-impl-%{version}.jar ${JAVA_EXT_DIR}/javac-impl-nb-7.0-b07.jar
 %lnSysJAR appframework.jar ${JAVA_EXT_DIR}/appframework-1.0.3.jar
 %lnSysJAR beansbinding.jar ${JAVA_EXT_DIR}/beansbinding-1.2.1.jar
 %lnSysJAR junit.jar ${JAVA_EXT_DIR}/junit-3.8.2.jar
@@ -447,8 +447,8 @@ install -d -m 755 %{buildroot}%{nb_java_dir}/ant/lib
 
 # linking the java to the external JARs
 pushd %{buildroot}%{nb_java_dir}/modules/ext
-  %lnSysJAR netbeans-javaparser-api.jar javac-api-nb-7.0-b07.jar
-  %lnSysJAR netbeans-javaparser-impl.jar javac-impl-nb-7.0-b07.jar
+  %lnSysJAR libnb-javaparser-api.jar javac-api-nb-7.0-b07.jar
+  %lnSysJAR libnb-javaparser-impl.jar javac-impl-nb-7.0-b07.jar
   %lnSysJAR appframework.jar appframework-1.0.3.jar
   %lnSysJAR beansbinding.jar beansbinding-1.2.1.jar
   %lnSysJAR junit4.jar junit-4.5.jar
