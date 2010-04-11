@@ -107,7 +107,6 @@ Release:        %mkrel 1
 Summary:        Integrated Development Environment (IDE)
 Group:          Development/Java
 License:        GPLv2 with exceptions or CDDL
-Vendor:         netbeans.org
 URL:            http://www.netbeans.org
 
 # The official zip is used: MD5: 1b085b82e04788beaf245859f818dcad
