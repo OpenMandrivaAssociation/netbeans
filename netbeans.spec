@@ -103,7 +103,7 @@
 
 Name:           %{nb_}
 Version:        %{nb_ver}
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Integrated Development Environment (IDE)
 Group:          Development/Java
 License:        GPLv2 with exceptions or CDDL
@@ -259,6 +259,7 @@ Group: Development/Java
 Requires: jpackage-utils
 Requires: java >= 1.6.0
 Requires: java-devel >= 0:1.6.0
+Requires: java-javadoc >= 0:1.6.0
 Requires: netbeans-javaparser >= %{javaparser_ver}
 Requires: appframework >= 1.0.3
 Requires: beansbinding >= 1.2.1
@@ -442,6 +443,19 @@ install_package %{buildroot}%{nb_java_dir} %{build_nb_dir}/%{nb_java}/*
 # install java ant
 install -d -m 755 %{buildroot}%{nb_java_dir}/ant/bin
 install -d -m 755 %{buildroot}%{nb_java_dir}/ant/lib
+%{__mkdir_p} %{buildroot}%{nb_java_dir}/config/Services/Platforms/org-netbeans-api-java-Platform/
+cat <<KONEC >%{buildroot}%{nb_java_dir}/config/Services/Platforms/org-netbeans-api-java-Platform/default_platform.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE platform PUBLIC "-//NetBeans//DTD Java PlatformDefinition 1.0//EN" "http://www.netbeans.org/dtds/java-platformdefinition-1_0.dtd">
+<platform default="yes" name="JDK 1.6 (Default)">
+    <properties>
+        <property name="platform.ant.name" value="default_platform"/>
+    </properties>
+    <javadoc>
+        <resource>file:/usr/share/javadoc/java/</resource>
+    </javadoc>
+</platform>
+KONEC
 %noautoupdate %{buildroot}%{nb_java_dir}
 
 # linking the java to the external JARs
