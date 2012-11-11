@@ -1,0 +1,12 @@
+diff -Nur netbeans-6.9/apisupport.harness/release/suite.xml netbeans-6.9.new/apisupport.harness/release/suite.xml
+--- netbeans-6.9/apisupport.harness/release/suite.xml	2010-06-10 15:17:40.000000000 +0400
++++ netbeans-6.9.new/apisupport.harness/release/suite.xml	2010-09-01 22:01:46.397920988 +0400
+@@ -313,7 +313,7 @@
+         <condition property="app.exe.prefix" value="" else="pre7_">
+             <isset property="nbexec.dll.found"/>
+         </condition>
+-        <copy file="${harness.dir}/launchers/${app.exe.prefix}app.exe" tofile="${build.launcher.dir}/bin/${app.name}.exe" overwrite="true"/>
++        <copy file="${harness.dir}/launchers/${app.exe.prefix}app.exe" tofile="${build.launcher.dir}/bin/${app.name}.exe" failonerror="false" overwrite="true"/>
+         <copy file="${harness.dir}/launchers/${app.exe.prefix}app_w.exe" tofile="${build.launcher.dir}/bin/${app.name}_w.exe" failonerror="false" overwrite="true"/>
+ 
+         <copy file="${harness.dir}/launchers/app.sh" tofile="${build.launcher.dir}/bin/${app.name}"/>

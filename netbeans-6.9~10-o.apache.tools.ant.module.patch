@@ -1,0 +1,32 @@
+diff -Nur netbeans-6.9/o.apache.tools.ant.module/build.xml netbeans-6.9.new/o.apache.tools.ant.module/build.xml
+--- netbeans-6.9/o.apache.tools.ant.module/build.xml	2010-06-10 15:20:50.000000000 +0400
++++ netbeans-6.9.new/o.apache.tools.ant.module/build.xml	2010-07-14 19:49:51.126679798 +0400
+@@ -78,6 +78,7 @@
+     </target>
+ 
+     <target name="netbeans-extra" depends="jar-bridge">
++<!--
+         <mkdir dir="${cluster}/ant/lib"/>
+         <copy todir="${cluster}/ant/lib">
+             <fileset dir="external/lib"/>
+@@ -87,6 +88,7 @@
+                 <include name="ant-misc-*.zip"/>
+             </fileset>
+         </unzip>
++-->
+     </target>
+ 
+     <target name="test-build" depends="jar-bridge,projectized-common.test-build"/>
+diff -Nur netbeans-6.9/o.apache.tools.ant.module/external/build.xml netbeans-6.9.new/o.apache.tools.ant.module/external/build.xml
+--- netbeans-6.9/o.apache.tools.ant.module/external/build.xml	2010-06-10 15:20:50.000000000 +0400
++++ netbeans-6.9.new/o.apache.tools.ant.module/external/build.xml	2010-07-14 19:53:47.904672448 +0400
+@@ -45,7 +45,9 @@
+ -->
+ <project name="o.apache.tools.ant.module/external" default="unzip" basedir=".">
+     <target name="unzip">
++<!--
+         <unzip src="ant-libs-1.8.0.zip" dest="lib"/>
++-->
+     </target>
+     <target name="clean">
+         <delete dir="lib"/>

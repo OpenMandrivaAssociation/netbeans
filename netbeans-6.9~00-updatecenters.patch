@@ -1,0 +1,46 @@
+diff -Nur netbeans-6.9/updatecenters/src/org/netbeans/modules/updatecenters/resources/Bundle.properties netbeans-6.9.new/updatecenters/src/org/netbeans/modules/updatecenters/resources/Bundle.properties
+--- netbeans-6.9/updatecenters/src/org/netbeans/modules/updatecenters/resources/Bundle.properties	2010-06-10 15:22:52.000000000 +0400
++++ netbeans-6.9.new/updatecenters/src/org/netbeans/modules/updatecenters/resources/Bundle.properties	2010-07-14 18:40:58.925745989 +0400
+@@ -53,9 +53,11 @@
+ Services/AutoupdateType/beta-update-provider.instance=NetBeans Beta
+ Services/AutoupdateType/thirdparty-update-provider.instance=3rd Party Plugins
+ Services/AutoupdateType/pluginportal-update-provider.instance=Plugin Portal
++Services/AutoupdateType/standard-update-provider-fedora.instance=NetBeans for Fedora
+ #NOI18N
+ URL_Standard=http://updates.netbeans.org/netbeans/updates/6.9/uc/final/stable/catalog.xml.gz?{$netbeans.hash.code}
+ URL_Beta=http://updates.netbeans.org/netbeans/updates/6.9/uc/final/beta/catalog.xml.gz?{$netbeans.hash.code}
+ URL_ThirdParty=http://updates.netbeans.org/netbeans/updates/6.9/uc/final/thirdparty/catalog.xml.gz?{$netbeans.hash.code}
+ URL_PluginPortal=http://plugins.netbeans.org/nbpluginportal/updates/6.9/catalog.xml.gz
++URL_Standard_Fedora=http://updates.netbeans.org/netbeans/updates/6.9/uc/final/fedora/catalog.xml.gz?{$netbeans.hash.code}
+ 
+diff -Nur netbeans-6.9/updatecenters/src/org/netbeans/modules/updatecenters/resources/mf-layer.xml netbeans-6.9.new/updatecenters/src/org/netbeans/modules/updatecenters/resources/mf-layer.xml
+--- netbeans-6.9/updatecenters/src/org/netbeans/modules/updatecenters/resources/mf-layer.xml	2010-06-10 15:22:52.000000000 +0400
++++ netbeans-6.9.new/updatecenters/src/org/netbeans/modules/updatecenters/resources/mf-layer.xml	2010-07-14 18:46:41.328680735 +0400
+@@ -55,7 +55,7 @@
+         <attr name="iconBase" stringvalue="org/netbeans/modules/updatecenters/resources/updateAction.gif"/>
+         <attr name="url" bundlevalue="org.netbeans.modules.updatecenters.resources.Bundle#URL_Standard"/>
+         <attr name="category" stringvalue="STANDARD"/>
+-        <attr name="enabled" boolvalue="true"/>
++        <attr name="enabled" boolvalue="false"/>
+         <attr name="instanceOf" stringvalue="org.netbeans.spi.autoupdate.UpdateProvider" />
+         <attr name="instanceCreate" methodvalue="org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogFactory.createUpdateProvider" />
+       </file>
+@@ -89,7 +89,17 @@
+         <attr name="instanceOf" stringvalue="org.netbeans.spi.autoupdate.UpdateProvider" />
+         <attr name="instanceCreate" methodvalue="org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogFactory.createUpdateProvider" />
+       </file>
+-      
++       
++      <file name="standard-update-provider-fedora.instance">
++        <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.modules.updatecenters.resources.Bundle"/>
++        <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/netbeans/modules/updatecenters/resources/updateAction.gif"/>
++        <attr name="url_key" stringvalue="URL_Standard_Fedora"/>
++        <attr name="category" stringvalue="STANDARD"/>
++        <attr name="enabled" boolvalue="true"/>
++        <attr name="instanceOf" stringvalue="org.netbeans.spi.autoupdate.UpdateProvider" />
++        <attr name="instanceCreate" methodvalue="org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogFactory.createUpdateProvider" />
++      </file>
++
+    </folder>
+     
+   </folder> <!-- Services -->

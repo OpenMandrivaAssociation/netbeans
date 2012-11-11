@@ -1,0 +1,23 @@
+diff -Nur netbeans-6.9/nbbuild/build.xml netbeans-6.9.new/nbbuild/build.xml
+--- netbeans-6.9/nbbuild/build.xml	2010-06-10 15:20:46.000000000 +0400
++++ netbeans-6.9.new/nbbuild/build.xml	2010-07-15 15:18:04.805684320 +0400
+@@ -149,7 +149,9 @@
+ 
+   <target name="init-module-list" depends="bootstrap,init-tasks">
+     <!-- Define modules. -->
++<!--
+     <checkmoduleconfigs nbroot=".."/>
++-->
+     <resolvelist name="allmodules" list="${nb.clusters.list}"/>
+     <pathconvert property="modules.fullpath" >
+         <path>
+@@ -299,7 +301,9 @@
+     <mkdir dir="${netbeans.dest.dir}/bin" />
+     <copy file="../ide/launcher/unix/netbeans" todir="${netbeans.dest.dir}/bin" />
+     <chmod file="${netbeans.dest.dir}/bin/netbeans" perm="ugo+rx"/>
++<!--
+     <copy file="../ide/launcher/windows/netbeans.exe" todir="${netbeans.dest.dir}/bin" />
++-->
+     <!-- if anybody knows better place for icons, let me know: jtulach@netbeans.org -->
+ 
+     <mkdir dir="${netbeans.dest.dir}/etc" />

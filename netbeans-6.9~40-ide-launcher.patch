@@ -1,0 +1,52 @@
+diff -Nur netbeans-6.9/ide/launcher/unix/netbeans netbeans-6.9.new/ide/launcher/unix/netbeans
+--- netbeans-6.9/ide/launcher/unix/netbeans	2010-06-10 15:19:10.000000000 +0400
++++ netbeans-6.9.new/ide/launcher/unix/netbeans	2010-07-22 04:03:54.905999281 +0400
+@@ -41,6 +41,17 @@
+ # Version 2 license, then the option applies only if the new code is
+ # made subject to such option by the copyright holder.
+ 
++# The Startup Notification Protocol Specification established by freedesktop.org
++# recommends to unset the DESKTOP_STARTUP_ID environment variable to avoid
++# possible reuse by some process started later by this process, e.g. when a browser
++# will be started after clicking a hyperlink in the NetBeans.
++if [ ! -z $DESKTOP_STARTUP_ID ] ; then
++    # Save a value for later using in the NB_DESKTOP_STARTUP_ID
++    NB_DESKTOP_STARTUP_ID=$DESKTOP_STARTUP_ID; export NB_DESKTOP_STARTUP_ID
++
++    unset DESKTOP_STARTUP_ID
++fi
++
+ #
+ # resolve symlinks
+ #
+@@ -57,16 +68,18 @@
+     fi
+ done
+ 
+-progdir=`dirname "$PRG"`
++#progdir=`dirname "$PRG"`
++# Patch for Debian/Ubuntu/Fedora where launcher is in /usr/bin
++progdir=/usr/share/netbeans/6.9/bin
+ 
+ if [ -f "$progdir"/../etc/netbeans.conf ] ; then
+     . "$progdir"/../etc/netbeans.conf
+ fi
+ 
+ # following should be done just in RPM or Solaris Launcher
+-# if [ -f /etc/netbeans.conf ] ; then
+-#     . /etc/netbeans.conf
+-# fi
++if [ -f /etc/netbeans.conf ] ; then
++     . /etc/netbeans.conf
++fi
+ 
+ 
+ # #68373: look for userdir, but do not modify "$@"
+@@ -198,7 +211,6 @@
+             --branding nb \
+             --clusters '"$netbeans_clusters"' \
+             -J-Dnetbeans.importclass=org.netbeans.upgrade.AutoUpgrade \
+-            -J-Dnetbeans.accept_license_class=org.netbeans.license.AcceptLicense \
+             ${netbeans_default_options} \
+             '"$@"'
+         ;;

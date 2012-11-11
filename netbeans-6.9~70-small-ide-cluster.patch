@@ -1,0 +1,154 @@
+diff -Nur netbeans-6.9/apisupport.kit/nbproject/project.xml netbeans-6.9.new/apisupport.kit/nbproject/project.xml
+--- netbeans-6.9/apisupport.kit/nbproject/project.xml	2010-06-10 15:17:40.000000000 +0400
++++ netbeans-6.9.new/apisupport.kit/nbproject/project.xml	2010-07-21 02:07:58.999356131 +0400
+@@ -11,6 +11,7 @@
+                         <specification-version>2.31</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.apisupport.crudsample</code-name-base>
+                     <run-dependency>
+@@ -24,6 +25,7 @@
+                         <specification-version>1.4</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.apisupport.harness</code-name-base>
+                     <run-dependency>
+@@ -42,12 +44,14 @@
+                         <specification-version>1.1</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.apisupport.paintapp</code-name-base>
+                     <run-dependency>
+                         <specification-version>1.1</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.apisupport.project</code-name-base>
+                     <run-dependency>
+diff -Nur netbeans-6.9/editor.kit/nbproject/project.xml netbeans-6.9.new/editor.kit/nbproject/project.xml
+--- netbeans-6.9/editor.kit/nbproject/project.xml	2010-06-10 15:18:42.000000000 +0400
++++ netbeans-6.9.new/editor.kit/nbproject/project.xml	2010-07-16 15:59:37.418687474 +0400
+@@ -5,6 +5,7 @@
+         <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+             <code-name-base>org.netbeans.modules.editor.kit</code-name-base>
+             <module-dependencies>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.css.visual</code-name-base>
+                     <run-dependency>
+@@ -12,6 +13,7 @@
+                         <specification-version>2.4</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.editor.actions</code-name-base>
+                     <run-dependency>
+@@ -40,6 +42,7 @@
+                         <specification-version>1.19</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.javascript.kit</code-name-base>
+                     <run-dependency>
+@@ -47,6 +50,7 @@
+                         <specification-version>0.103</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.languages.diff</code-name-base>
+                     <run-dependency>
+@@ -79,6 +83,7 @@
+                         <specification-version>1.21</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.web.flyingsaucer</code-name-base>
+                     <run-dependency>
+@@ -86,6 +91,7 @@
+                         <specification-version>1</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.xml.core</code-name-base>
+                     <run-dependency>
+@@ -119,6 +125,7 @@
+                         <specification-version>1.13</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.xsl</code-name-base>
+                     <run-dependency>
+@@ -126,6 +133,7 @@
+                         <specification-version>1.13</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+             </module-dependencies>
+             <public-packages/>
+         </data>
+diff -Nur netbeans-6.9/ide.kit/nbproject/project.xml netbeans-6.9.new/ide.kit/nbproject/project.xml
+--- netbeans-6.9/ide.kit/nbproject/project.xml	2010-06-10 15:19:10.000000000 +0400
++++ netbeans-6.9.new/ide.kit/nbproject/project.xml	2010-07-21 04:51:25.244350718 +0400
+@@ -129,6 +129,7 @@
+                         <specification-version>1.11</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.httpserver</code-name-base>
+                     <run-dependency>
+@@ -136,6 +137,7 @@
+                         <specification-version>2.7</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.jumpto</code-name-base>
+                     <run-dependency>
+@@ -222,12 +224,14 @@
+                         <specification-version>1.0</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.dlight.terminal</code-name-base>
+                     <run-dependency>
+                         <specification-version>1.0</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+             </module-dependencies>
+             <test-dependencies>
+                 <test-type>
+diff -Nur netbeans-6.9/java.kit/nbproject/project.xml netbeans-6.9.new/java.kit/nbproject/project.xml
+--- netbeans-6.9/java.kit/nbproject/project.xml	2010-06-10 15:19:56.000000000 +0400
++++ netbeans-6.9.new/java.kit/nbproject/project.xml	2010-07-16 16:04:08.390684786 +0400
+@@ -204,6 +204,7 @@
+                         <specification-version>1.8</specification-version>
+                     </run-dependency>
+                 </dependency>
++<!--
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.websvc.jaxws21</code-name-base>
+                     <run-dependency>
+@@ -224,6 +225,7 @@
+                         <specification-version>1.0</specification-version>
+                     </run-dependency>
+                 </dependency>
++-->
+                 <dependency>
+                     <code-name-base>org.netbeans.modules.xml.tools.java</code-name-base>
+                     <run-dependency>
