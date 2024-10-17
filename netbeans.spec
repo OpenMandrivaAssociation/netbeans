@@ -140,7 +140,7 @@ Summary:        Integrated Development Environment (IDE)
 Group:          Development/Java 
 License:        GPLv2 with exceptions or CDDL
 Vendor:         netbeans.org
-URL:            http://www.netbeans.org
+URL:            https://www.netbeans.org
 
 # Officially released zip is used:
 Source0: http://download.netbeans.org/netbeans/6.9/final/zip/netbeans-6.9-201006101454-src.zip
